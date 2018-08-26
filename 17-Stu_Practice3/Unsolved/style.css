@@ -1,0 +1,126 @@
+body {
+    background-color: brown;
+}
+
+p {
+    color: white;
+    padding: 5px;
+    font-family: sans-serif;
+}
+
+main {
+    margin: 50px;
+}
+
+section {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: repeat(7, 1fr);
+    grid-gap: 8px;
+}
+
+.box {
+    grid-row: span 2;
+    grid-column: span 1;
+    background-size: cover;
+}
+
+div h2 {
+    font-weight: bold;
+    font-family: sans-serif;
+    color: white;
+    font-size: 40px;
+    text-align: left;
+    line-height: 70px;
+}
+
+div p {
+    line-height: 40px;
+}
+
+.one {
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 90px;
+}
+
+.two {
+    background-color: turquoise;
+    padding-left: 25px;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+.three {
+    background-image: url(images/tie.png);
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.four {
+    background-image: url(images/sign.jpg);
+}
+.five {
+    background-color: turquoise;
+    padding-left: 25px;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+.six {
+    background-image: url(images/moped.jpg);
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+@media only screen and (min-width: 600px) {
+    section {
+        height: 70vh;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(5,1f)r;
+        grid-template-rows: repeat(4, 1fr);
+        grid-gap: 8px;
+    }
+    .one, .seven,.eight,.ten {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    .two {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    .three {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    .six {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+    .four {
+        grid-column-start: 5;
+        grid-column-end: 6;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    .seven {
+        background-image: url(images/light.jpg);
+    }
+    .eight {
+        background-image: url(images/flower.jpg);
+    }
+    .nine {
+        background-image: url(images/sax.jpg);
+    }
+    .ten {
+        background-color: turquoise;
+    }
+}
